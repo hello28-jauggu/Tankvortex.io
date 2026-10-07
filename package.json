@@ -1,0 +1,14 @@
+{
+  "name": "tankvortex-io",
+  "version": "1.0.0",
+  "description": "TankVortex.io — original multiplayer tank arena",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "express": "^4.21.0"
+  }
+}

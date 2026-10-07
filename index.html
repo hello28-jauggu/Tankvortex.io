@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>TankVortex.io</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="hud">
+      <div id="logo">TANKVORTEX<span>.io</span></div>
+      <div id="stats">
+        <div>Score <b id="score">0</b></div>
+        <div>Level <b id="level">1</b></div>
+        <div>Players <b id="players">0</b></div>
+      </div>
+    </div>
+    <div id="upgradeBar" class="hidden">
+      <div class="upTitle">Upgrade points: <b id="upPoints">0</b></div>
+      <div class="upRow" id="upRow"></div>
+    </div>
+    <div id="classBar" class="hidden">
+      <div class="upTitle">Tank upgrades</div>
+      <div class="classRow" id="classRow"></div>
+    </div>
+    <div id="chatBox">
+      <div id="chatLog"></div>
+      <form id="chatForm"><input id="chatInput" maxlength="80" placeholder="Chat... Enter" autocomplete="off" /></form>
+    </div>
+    <div id="leaderboard">
+      <div class="lbTitle">Leaderboard</div>
+      <div id="lbList"></div>
+    </div>
+    <div id="minimap"><canvas id="mini" width="120" height="120"></canvas></div>
+    <div id="hint">WASD move · Mouse aim · Click shoot · Enter chat</div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <div id="mobile">
+    <div id="joyBase"><div id="joyKnob"></div></div>
+    <button id="fireBtn">FIRE</button>
+  </div>
+
+  <div id="menu">
+    <div class="card">
+      <h1>TANKVORTEX<span>.io</span></h1>
+      <p>Multiplayer tank arena — accounts, parties, chat, tank tree.</p>
+      <input id="nameInput" maxlength="16" placeholder="Username" value="Pilot" />
+      <input id="passInput" type="password" maxlength="64" placeholder="Password (account)" />
+      <div class="rowBtns">
+        <button type="button" id="loginBtn">Login</button>
+        <button type="button" id="regBtn">Register</button>
+      </div>
+      <button id="playBtn">PLAY PUBLIC</button>
+      <button id="partyBtn" class="secondary">CREATE PARTY</button>
+      <button id="offlineBtn" class="secondary">Offline practice</button>
+      <div id="menuMsg"></div>
+      <div class="foot">Original game · npm install && npm start</div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
